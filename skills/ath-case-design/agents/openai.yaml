@@ -1,0 +1,6 @@
+interface:
+  display_name: "AITestHub 用例设计"
+  short_description: "按需求生成、整理和优化独立 UI/API 业务测试场景与用例"
+  default_prompt: "使用 $ath-case-design，根据我明确引用的资料设计或优化测试用例，并说明依据和缺口。"
+policy:
+  allow_implicit_invocation: true
