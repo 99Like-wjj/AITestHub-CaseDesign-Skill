@@ -1,0 +1,11 @@
+This project contains original AITestHub S01 rules and deterministic business helpers.
+Business payload projections track AITestHub contracts (ath.contracts.v1), developed
+in [private source path omitted] under MIT. They are not a separate protocol SDK.
+Runtime dependency: Zod 4.6.7 (MIT). Development dependencies: TypeScript 6.0.3
+(Apache-2.0), @types/node 24.10.0 (MIT). Exact dependency integrity is in pnpm-lock.yaml.
+No source or runtime has been copied from the user's installed reference Skills.
+The 0.1.1 package includes a hash-verified structural snapshot of AITestHub
+published contracts (4fd2daf7-e5e4-493d-90ac-53ad642cc09e), under MIT.
+Zod's full MIT license is included in LICENSES/zod-4.6.7-LICENSE.
+The npm library requires its declared locked Zod dependency; the standalone
+Skill ZIP contains original rules only, not a transport client or bundled runtime.

@@ -1,0 +1,42 @@
+{
+  "name": "@aitesthub/case-design-skill",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.28.11",
+  "engines": {
+    "node": "24.19.0",
+    "pnpm": "11.28.11"
+  },
+  "exports": {
+    ".": "./dist/src/index.js",
+    "./local-workspace": "./dist/src/local-workspace.js",
+    "./rules": "./dist/rules.js"
+  },
+  "files": [
+    "dist/src",
+    "dist/rules.js",
+    "dist/rules.d.ts",
+    "skills/ath-case-design",
+    "LICENSES",
+    "pnpm-lock.yaml",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc && node scripts/build-content.mjs",
+    "check:package": "node scripts/build-content.mjs --check",
+    "package": "pnpm build && pnpm pack --pack-destination dist/packages && node scripts/package-skill.mjs",
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "typescript": "6.0.3",
+    "prettier": "3.10.0"
+  }
+}
