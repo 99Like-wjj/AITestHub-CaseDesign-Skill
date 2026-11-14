@@ -29,7 +29,9 @@
     "build": "tsc && node scripts/build-content.mjs",
     "check:package": "node scripts/build-content.mjs --check",
     "package": "pnpm build && pnpm pack --pack-destination dist/packages && node scripts/package-skill.mjs",
-    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json"
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/*.mjs\" package.json tsconfig.json",
+    "format:docs": "prettier --check AGENTS.md AGENTS.example.md CONTRIBUTING.md SECURITY.md README.md SOURCE_PUBLICATION.md \"docs/development/*.md\" .github/pull_request_template.md .prettierrc.json",
+    "quality:check": "pnpm format:check && pnpm format:docs && pnpm typecheck"
   },
   "dependencies": {
     "zod": "4.6.7"
