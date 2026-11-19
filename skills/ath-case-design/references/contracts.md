@@ -6,7 +6,7 @@
 - `ath_assets/get`：`{op:'get',projectId,id}`，读取 asset 及修订。
 - `create-set`：`{op,projectId,input:{commandId,kind,requirementVersionId,content:{title,basisRefs}}}`。
 - `create-scenario`：input 有 commandId/setId/content；content 含 kind/requirementVersionId/setId/title/objective/sharedPreconditions/basisRefs。
-- `create-case`：input 有 commandId/scenarioId/content；UI content 含 kind:'UI'/scenarioId/title/testPoint/preconditions/expected/basisRefs，没有点击路线。
+- `create-case`：input 有 commandId/scenarioId/content；UI content 含 kind:'UI'/scenarioId/title/testPoint/preconditions/steps/expected/basisRefs。steps 按业务顺序，每步包含非空 action，以及可选的 expected。历史读取可能没有 steps，正式写入新建或修订时须提供。
 - `revise`：`{op:'revise',projectId,id,input:{commandId,baseRevisionId,rowVersion,content}}`，生成不可变新修订。
 - `submit`：input 为 ath.asset-changes.v1，submissionId、kind、projectId、requirementVersionId、mode、operations、baseRevisionMap；逐项 accepted/rejected，absenceDeletes:false。
 

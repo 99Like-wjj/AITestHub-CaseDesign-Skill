@@ -1,7 +1,7 @@
 {
   "schemaVersion": "ath.skill-manifest.v1",
   "skillId": "ath-case-design",
-  "skillVersion": "0.1.1",
+  "skillVersion": "0.1.2",
   "compatibleContracts": [
     "ath.contracts.v1"
   ],
@@ -28,7 +28,9 @@
     "original-operation-lookup",
     "api-business-proposals",
     "provided-api-content-submission",
-    "source-opinion-to-actual-written-revision-cas"
+    "source-opinion-to-actual-written-revision-cas",
+    "ui-business-steps",
+    "official-mcp-ui-meeting-handoff-and-reply"
   ],
   "outsideScope": [
     "api-executable-generation",
@@ -48,29 +50,29 @@
   ],
   "schemaValidation": "published-tool-inputs-and-asset-structure; server-refinements-and-authorization-remain-authoritative",
   "contractSnapshot": {
-    "sha256": "d6d1d0b76cd5e476cbbb50b98f6cc9c99634ddb46f13f4d91e57ae214f199733",
+    "sha256": "29f0ca6f774e7d326cdc72dd255bd4e7223e0c9509c0fe6df272d26da152f23c",
     "sourceFileHashes": {
-      "catalog.json": "9cfdcd9903bc8be208fe6787b506af303cf12e1c1a7e2c36f344d152bbec943d",
-      "components.json": "7dfb04a9d3841aca7e5bda6a979e0bd9529631ff9b239560a1bec87f363befec"
+      "catalog.json": "1c6d26757ac9ca00305eb17d49a5952231d3177e59e8c037f26fd453b206c78e",
+      "components.json": "7fe6866fd0153c835844dc70d6217e93f8d8deb0dcf48d247738c8d064ff430e"
     },
     "sourceHashes": {
-      "packages/contracts/src/base.ts": "4f2755cab92117c84f76bfb6299bcf38ea5849c437b1b0a58a2a7f7b3504bccc",
-      "packages/contracts/src/domain.ts": "218f9be36354fbd9e04f11f8769be0be79db95fa81def70ac9390e0415213561",
-      "packages/contracts/src/assets.ts": "d58af77891355fd74d897c592a83ab4c119244d25414cc4a20f5db17d4686383",
-      "packages/contracts/src/requirements.ts": "aa399de796c724e5a2aa208e451e9ddcd9d77b5dde6cb5c25ae63cab487a4fdc",
-      "packages/contracts/src/ui-results.ts": "425b76aea9f4bcaf458e0d151e873931843f92021ef08d1ecc9fb2b5c5901455",
-      "packages/contracts/src/knowledge.ts": "3c9d78b95fe1deec6bd58c4a51d1afaf48670a317b959cc6f6153fc502674848",
-      "packages/contracts/src/plans.ts": "a3d451aa24174246399326553da96924b4920d4f3c072e79dde6995b353c1899",
-      "packages/contracts/src/retests.ts": "2abed4474ad095fc43bfd74d1bee19c85dae319ca65d522c3b705a69827663cc"
+      "packages/contracts/src/assets.ts": "354532661b477c6162c2b2b8e0c2403cef1342a0c4b849a47ee5e4f1d6394905",
+      "packages/contracts/src/base.ts": "6f8d4ded48aa1e42a305a54cc92fbee4352b14d2cc4436596b3355940a537847",
+      "packages/contracts/src/domain.ts": "fe74474fbf7e5b19d0d3c4c2471d00981c3dded0254203ee31fbdf190c741792",
+      "packages/contracts/src/mcp.ts": "a632833a486c1795618b9a757369fc6f5b145da7461c7bf6e149f34fcfd46c52",
+      "packages/contracts/src/ui-reviews.ts": "67d2030828518a34d1e22933d096ffa36860b12c25461077f40d717f1d9d33f6",
+      "packages/application/src/tool-registry/business.ts": "5304a000c4dff8425fd417c7f4672df0d8acf3e2df9ad35b0bd0f322b2e58571",
+      "apps/api/src/mcp.ts": "9857c738f4d30f7be9db6ecaa52cb6ddf0f743eea48b388e2ded2584f99efb21",
+      "apps/api/src/mcp-business.ts": "0e69a38bf3743628019b51dde291aa4b2053ff526449c3d9c88ecd6b585d9dd9"
     }
   },
   "files": {
-    "SKILL.md": "0f3ae127108d288e8818f9f3b1fdb44bd5d5530abb2576b7f0dab772d05657ce",
+    "SKILL.md": "5fae90dd796c20093c56932996ba3240a46533880527206258209816db9a9c54",
     "agents/openai.yaml": "18d77bf2fb509f9244684f84c8eeb7f22b5c53b4fbeb7967fbb5028173573cbe",
-    "references/business-rules.md": "77797ede5c2f455b43e74b7178ec6bcadea246f18448a2a797e83a5db7413aa0",
+    "references/business-rules.md": "9c1887bf79cb99f4bac5fdf41c10b37e9ba56d055675d5655c364f0e25d3eea8",
     "references/coverage.md": "79ef93e76774dbcb5ddc39a07ba53fc33303e0ef8444d84caad5ed0ca7960af6",
-    "references/contracts.md": "32856d52f5cf0d5b4847008a1e72f832b97eb27facca9db9a45788d6c9efc0dc",
-    "references/review.md": "3a2ec075a956fd06bdc5ccb56a0a0784a6827d54fa7905b95c9af7a7df67db4a",
+    "references/contracts.md": "f7e81f599e18b619df69a6159d3517a32e3fe13f91471c7017926e1de24b7c03",
+    "references/review.md": "6e7709b2e12e74c0b0f7958638aa4e4da7bfb86977aa5b20fde5ec27039a4938",
     "host-adapters/local.md": "d4e5a4e0ed55583818757672cf5664a77b10581b597258f04a323182f1cc81f6",
     "host-adapters/platform.md": "a8e0a84d6d4728f46964489ce8ad9fe177bdc9145e9f9c49d1cb9fbd6829c69d",
     "LICENSE": "2459c1991d3bae5c6185f6b7a79520093beef2aff40ef1f140258eec9ad9764e"

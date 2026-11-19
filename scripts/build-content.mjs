@@ -68,6 +68,8 @@ const manifest = {
     'api-business-proposals',
     'provided-api-content-submission',
     'source-opinion-to-actual-written-revision-cas',
+    'ui-business-steps',
+    'official-mcp-ui-meeting-handoff-and-reply',
   ],
   outsideScope: [
     'api-executable-generation',

@@ -44,9 +44,20 @@ const caseFields = {
   expected: text,
   basisRefs,
 };
+const uiStepsSchema = z
+  .array(
+    z.strictObject({
+      action: z.string().trim().min(1).max(10_000),
+      expected: z.string().trim().min(1).max(10_000).optional(),
+    }),
+  )
+  .min(1)
+  .max(100);
+
 export const uiCaseDraftSchema = z.strictObject({
   ...caseFields,
   kind: z.literal('UI'),
+  steps: uiStepsSchema.optional(),
   existing: existingBaseSchema.optional(),
 });
 export const apiProposalSchema = z.strictObject({
@@ -189,6 +200,7 @@ export const uiContentSchema = z.strictObject({
   title,
   testPoint: text,
   preconditions: z.array(z.string().max(10_000)).max(100),
+  steps: uiStepsSchema.optional(),
   expected: text,
   basisRefs,
 });

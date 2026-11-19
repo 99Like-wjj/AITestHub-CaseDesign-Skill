@@ -301,6 +301,11 @@ function callFor(
         '资料不完整的API用例只保留提案。',
       );
     parentId = parentReceipt(box, item.scenarioLocalId).id;
+    if (item.kind === 'UI' && !e.reference && !item.steps?.length)
+      throw new CaseDesignError(
+        'VALIDATION_ERROR',
+        '新建或修订 UI 用例需要明确的文字业务步骤。',
+      );
     content =
       item.kind === 'API'
         ? providedApiContentSchema.parse({
@@ -313,6 +318,7 @@ function callFor(
             title: item.title,
             testPoint: item.testPoint,
             preconditions: item.preconditions,
+            ...(item.steps ? { steps: item.steps } : {}),
             expected: item.expected,
             basisRefs: item.basisRefs,
           });
