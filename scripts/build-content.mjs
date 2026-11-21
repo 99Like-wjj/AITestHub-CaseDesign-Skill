@@ -44,6 +44,10 @@ const publishedBytes = await readFile(
   resolve(root, 'src/published-contracts.json'),
 );
 const published = JSON.parse(publishedBytes.toString('utf8'));
+const apiContentBytes = await readFile(
+  resolve(root, 'src/api-content.contract.json'),
+);
+const apiContent = JSON.parse(apiContentBytes.toString('utf8'));
 const manifest = {
   schemaVersion: 'ath.skill-manifest.v1',
   skillId: 'ath-case-design',
@@ -93,6 +97,11 @@ const manifest = {
     sha256: createHash('sha256').update(publishedBytes).digest('hex'),
     sourceFileHashes: published.provenance.files,
     sourceHashes: published.provenance.sourceHashes,
+    currentApiContent: {
+      sha256: createHash('sha256').update(apiContentBytes).digest('hex'),
+      component: apiContent.component,
+      sourceHashes: apiContent.sourceHashes,
+    },
   },
   files: hashes,
 };
@@ -118,6 +127,10 @@ if (process.argv.includes('--check')) {
   await writeFile(
     resolve(root, 'dist/src/published-contracts.json'),
     publishedBytes,
+  );
+  await writeFile(
+    resolve(root, 'dist/src/api-content.contract.json'),
+    apiContentBytes,
   );
   await writeFile(
     resolve(root, 'dist/rules.js'),

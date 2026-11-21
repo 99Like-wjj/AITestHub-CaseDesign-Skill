@@ -1,7 +1,7 @@
 {
   "schemaVersion": "ath.skill-manifest.v1",
   "skillId": "ath-case-design",
-  "skillVersion": "0.1.2",
+  "skillVersion": "0.1.5",
   "compatibleContracts": [
     "ath.contracts.v1"
   ],
@@ -64,12 +64,21 @@
       "packages/application/src/tool-registry/business.ts": "5304a000c4dff8425fd417c7f4672df0d8acf3e2df9ad35b0bd0f322b2e58571",
       "apps/api/src/mcp.ts": "9857c738f4d30f7be9db6ecaa52cb6ddf0f743eea48b388e2ded2584f99efb21",
       "apps/api/src/mcp-business.ts": "0e69a38bf3743628019b51dde291aa4b2053ff526449c3d9c88ecd6b585d9dd9"
+    },
+    "currentApiContent": {
+      "sha256": "f26ef6b0ff41161c729f45f0eddc7187612acd807f7b03d2c97b9ae068f11f4c",
+      "component": "domain.apiCaseContentSchema",
+      "sourceHashes": {
+        "packages/contracts/src/domain.ts": "2e1c99ce8a3d4ba51b9ac2a7c1f455d049c6676eff04280215ee1783479baba8",
+        "packages/contracts/src/base.ts": "6f8d4ded48aa1e42a305a54cc92fbee4352b14d2cc4436596b3355940a537847",
+        "packages/contracts/src/source-links.ts": "cb25ac787738dcd385f2fbd41dc799d9fae2ef4706ff7c479b5aae7be30ea07d"
+      }
     }
   },
   "files": {
-    "SKILL.md": "5fae90dd796c20093c56932996ba3240a46533880527206258209816db9a9c54",
+    "SKILL.md": "3f4892b03fa99d90f89477c0ddbc24d97b2aed3ffcdad6bd97dd6742bf3fa3d3",
     "agents/openai.yaml": "18d77bf2fb509f9244684f84c8eeb7f22b5c53b4fbeb7967fbb5028173573cbe",
-    "references/business-rules.md": "9c1887bf79cb99f4bac5fdf41c10b37e9ba56d055675d5655c364f0e25d3eea8",
+    "references/business-rules.md": "abf77cbd5b918e47167f473963ba57d62d29b09f2d4a50eb3c990fa116817794",
     "references/coverage.md": "79ef93e76774dbcb5ddc39a07ba53fc33303e0ef8444d84caad5ed0ca7960af6",
     "references/contracts.md": "f7e81f599e18b619df69a6159d3517a32e3fe13f91471c7017926e1de24b7c03",
     "references/review.md": "6e7709b2e12e74c0b0f7958638aa4e4da7bfb86977aa5b20fde5ec27039a4938",
